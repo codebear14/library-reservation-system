@@ -1,0 +1,6 @@
+SELECT book_name, topic_name, author_name, is_available FROM books b, authors a, topics t Where b.author_id = a.author_id AND t.topic_id= b.topic_id;
+SELECT book_name, topic_name, author_name, is_available FROM books b, authors a, topics t Where b.author_id = a.author_id AND t.topic_id= b.topic_id and t.topic_id=1;
+SELECT book_name, topic_name, author_name, is_available FROM books b, authors a, topics t Where b.author_id = a.author_id AND t.topic_id= b.topic_id and t.topic_id=2;
+
+UPDATE books SET is_available = 0 WHERE book_id = 1;
+SELECT book_name, author_name  FROM books b, authors a, reservations r WHERE b.author_id = a.author_id AND b.book_id = r.book_id AND user_id = 19;
